@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5</title>
+</head>
+<body>
+<!-- Question.1 -->
+<b>Question.1: Create a button, onclick of which new heading tag h1 should be added with text as "MERN Stack" on  the screen above button.</b>
+<h2 id="heading"></h2>
+<button id="btn">Click Me</button>
+<script>
+let btn=document.querySelector("#btn");
+    btn.addEventListener("click", function(){
+      let head= document.querySelector("#heading").innerHTML="MERN Stack";
+    });
+</script>
+<hr><hr>
+
+<!-- Question.2 -->
+<b>Question.2: Write code to get 1st H1 element from a webpage using DOM.</b>
+<h1>Heading1</h1>
+<h1>heading2</h1>
+<h1>Heading3</h1>
+<h1>Heading4</h1>
+<script>
+    document.getElementsByTagName("h1")[0].style.backgroundColor="blue";
+    // document.querySelector("h1")[1].style.backgroundColor="blue";
+    </script>
+<hr><hr>
+
+
+<!-- Question.3 -->
+<b>Question.3: Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</b>
+<div class="clock">
+    <div id="sample"></div>
+</div>
+<script>
+    function clock(){
+        var clock= new Date().toLocaleTimeString();
+        document.getElementById("sample").innerText = clock;
+      }
+      setInterval(clock,1000);
+
+</script>
+<hr><hr>
+
+<!-- Question.4 -->
+<b>Question.4: Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy</b>
+<p id="hello">HELLO, World</p>
+<button id="btn2">Replace Text</button>
+<script>
+    let x=document.querySelector("#btn2");
+    x.addEventListener("click", changeText);
+    function changeText(){
+        document.querySelector("#hello").innerText="Welcome to Elevation academy";
+    }
+</script>
+<hr><hr>
+
+<!-- Question.5 -->
+<b>Question.5: Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this button hide the "Hello World" text.</b><br>
+<p id="hello2">HELLO, World</p>
+<button id="btn3">Hide Text</button>
+<script>
+    let y=document.querySelector("#btn3");
+    y.addEventListener("click", changeText);
+    function changeText(){
+        //document.querySelector("#hello2").innerText="";
+        document.querySelector("#hello2").style.display="none";
+    }
+</script>
+<hr><hr>
+</body>
+</html>
